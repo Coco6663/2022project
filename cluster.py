@@ -44,8 +44,15 @@ def save(model):
 
 if __name__ == '__main__':
 
-    #读取csv文件，获取所有的标题
+    items = []
 
+    with open('MailListTitle.csv', 'r', encoding='utf-8', newline='') as f:
+        reader = csv.reader(f)
+        for r in reader:
+            items.append(r[0])
+
+    # print(len(documents))
+    # print(documents)
 
     cluster()
 
